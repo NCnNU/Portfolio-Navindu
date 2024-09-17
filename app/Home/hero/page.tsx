@@ -8,9 +8,9 @@ const Herosection = () => {
           src="/images/n2.png"
           alt="Picture of the author"
           width={100}
-          height={5}
+          height={10}
         />
-      <div className="w-full h-full flex justify-end overflow-hidden">
+      <div className="w-full h-full flex justify-end overflow-hidden ">
         <Image
           src="/images/file.png"
           alt="Picture of the author"
