@@ -2,6 +2,14 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalTrigger,
+} from "./animated-modal";
+import { AnimatedTooltip } from "./animated-tooltip";
 
 export const Card = React.memo(
   ({
@@ -45,10 +53,23 @@ export const Card = React.memo(
 );
 
 Card.displayName = "Card";
+type tech = {
+  id: number;
+  name: string;
+  image: string;
+};
 
 type Card = {
+  id: number;
   title: string;
   src: string;
+  subtitle?: string;
+  description?: string;
+  contribution?: string;
+  role: string;
+  github: string;
+  web: string;
+  technologies: tech[];
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {
@@ -70,13 +91,81 @@ export function FocusCards({ cards }: { cards: Card[] }) {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full mb-32">
         {cards.map((card, index) => (
-          <Card
-            key={card.title}
-            card={card}
-            index={index}
-            hovered={hovered}
-            setHovered={setHovered}
-          />
+          <Modal key={card.title}>
+            <ModalTrigger>
+              <Card
+                key={card.title}
+                card={card}
+                index={index}
+                hovered={hovered}
+                setHovered={setHovered}
+              />
+            </ModalTrigger>
+            <ModalBody>
+              <ModalContent>
+                <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-2">
+                  {card.title}
+                </h4>
+                <h6 className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 font-medium text-center mb-8">
+                  {card.subtitle}
+                </h6>
+                <div className="flex justify-center items-center">
+                  <Image
+                    src={card.src}
+                    alt={card.title}
+                    width="500"
+                    height="500"
+                    className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+                  />
+                </div>
+                <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 font-normal text-justify mt-8">
+                  {card.description}
+                </p>
+                <div>
+                  <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 font-normal text-justify mt-4">
+                    {card.role}
+                  </p>
+                  {card.technologies && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {card.technologies.map((tech) => (
+                        <AnimatedTooltip key={tech.id} items={[tech]} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </ModalContent>
+              <ModalFooter>
+                <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+                  <span
+                    className="group-hover/modal-btn:translate-x-40 text-center transition duration-500"
+                    onClick={() => (window.location.href = card.github)}
+                  >
+                    🧑‍💻
+                  </span>
+                  <div
+                    className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20"
+                    onClick={() => (window.location.href = card.github)}
+                  >
+                    code
+                  </div>
+                </ModalTrigger>
+                <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+                  <span
+                    className="group-hover/modal-btn:translate-x-40 text-center transition duration-500"
+                    onClick={() => (window.location.href = card.web)}
+                  >
+                    🌐
+                  </span>
+                  <div
+                    className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20"
+                    onClick={() => (window.location.href = card.web)}
+                  >
+                    View
+                  </div>
+                </ModalTrigger>
+              </ModalFooter>
+            </ModalBody>
+          </Modal>
         ))}
       </div>
     </div>
