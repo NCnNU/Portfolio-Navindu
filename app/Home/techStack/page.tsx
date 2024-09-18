@@ -132,7 +132,7 @@ export function TechStack() {
       <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
         Technologies
       </h2>
-      <p className="text-neutral-400  text-sm md:text-base max-w-sm mb-32">
+      <p className="text-neutral-400  text-sm md:text-base max-w-sm mb-28">
         Here are some of the technologies I&apos;m familiar with, which I use to
         build efficient and visually appealing web applications.
       </p>
