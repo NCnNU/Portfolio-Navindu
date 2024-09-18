@@ -37,8 +37,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Experience
         </h2>
         <p className="text-neutral-400 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I am currently pursuing a Bachelor &apos;s degree in Information
-          Technology, focusing on software engineering and web development.
+          Over the years, I have gained significant experience through a range
+          of key projects and events.
         </p>
       </div>
 

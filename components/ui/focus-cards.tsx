@@ -76,7 +76,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="w-full bg-white dark:bg-neutral-950  md:px-10 mb-64 border-2">
+    <div className="w-full bg-white dark:bg-neutral-950  md:px-10 mb-0 border-2">
       {/* Projects Heading */}
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">

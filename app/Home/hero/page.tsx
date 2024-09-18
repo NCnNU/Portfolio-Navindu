@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Herosection = () => {
   return (
-    <div className="relative overflow-hidden max-h-screen w-full border-2 ">
+    <div className="relative overflow-hidden max-h-screen w-full  ">
       {/* Image Container */}
       <Image
         src="/images/n2.png"

@@ -11,7 +11,7 @@ import { TechStack } from "./Home/techStack/page";
 const Home = () => {
   return (
     <>
-      <h1>Navindu</h1>
+      {/* <h1>Navindu</h1> */}
       <Particles />
       <Herosection />
       <Education />
