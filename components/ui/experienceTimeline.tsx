@@ -7,7 +7,7 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data, id }: { data: TimelineEntry[]; id: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -26,9 +26,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
+  console.log(data);
   return (
     <div
+      id={id}
       className="w-full bg-themeColor dark:bg-neutral-950  md:px-10 py-0"
       ref={containerRef}
     >

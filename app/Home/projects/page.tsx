@@ -1,6 +1,10 @@
 import { FocusCards } from "@/components/ui/focus-cards";
 
-export function ProjectCards() {
+interface ProjectCardsProps {
+  id: string;
+}
+
+export function ProjectCards({ id }: ProjectCardsProps) {
   const cards = [
     {
       id: 1,
@@ -158,5 +162,5 @@ export function ProjectCards() {
     },
   ];
 
-  return <FocusCards cards={cards} />;
+  return <FocusCards cards={cards} id={id} />;
 }

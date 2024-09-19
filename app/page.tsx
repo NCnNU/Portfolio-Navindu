@@ -1,5 +1,4 @@
-// import { LampDemo } from "./Home/lampSection/lampSection";
-
+import { SignupFormDemo } from "./Home/contact/contact";
 import { Education } from "./Home/education/education";
 import { Experience } from "./Home/experience/experience";
 import Herosection from "./Home/hero/page";
@@ -11,13 +10,13 @@ import { TechStack } from "./Home/techStack/page";
 const Home = () => {
   return (
     <>
-      {/* <h1>Navindu</h1> */}
       <Particles />
-      <Herosection />
-      <Education />
-      <TechStack />
-      <ProjectCards />
-      <Experience />
+      <Herosection id="hero" />
+      <Education id="education" />
+      <TechStack id="techStack" />
+      <ProjectCards id="projects" />
+      <Experience id="experience" />
+      <SignupFormDemo />
       <FloatingDockDemo />
     </>
   );

@@ -1,22 +1,54 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const Herosection = () => {
+interface HerosectionProps {
+  id?: string;
+}
+
+const Herosection: React.FC<HerosectionProps> = ({ id }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="relative overflow-hidden max-h-screen w-full  ">
-      {/* Image Container */}
-      <Image
-        src="/images/n2.png"
-        alt="Picture of the author"
-        width={100}
-        height={10}
-      />
-      <div className="w-full h-full flex justify-end overflow-hidden">
+    <div id={id} className="relative overflow-hidden min-h-screen w-full">
+      {/* Fixed Image at bottom-right corner */}
+      <div className="w-full flex ">
         <Image
-          src="/images/file.png"
+          src={isScrolled ? "/images/n2-3.png" : "/images/n2.png"}
+          alt="Picture of the author"
+          width={100}
+          height={100}
+          className={
+            isScrolled
+              ? "fixed bottom-0 right-0 opacity-40"
+              : "fixed bottom-0 left-0 "
+          }
+        />
+      </div>
+
+      {/* Image Container */}
+      <div className=" min-h-screen flex justify-end overflow-hidden w-screen">
+        <Image
+          src="/images/file-5.png"
           alt="Picture of the author"
           width={850}
-          height={100}
-          className="transform translate-x-1/4 -translate-y-44" // Move up by 10 units
+          height={850}
+          className="
+           transform translate-x-1/4 -translate-y-0
+          " // Adjusting width and position for mobile screens
         />
       </div>
     </div>
