@@ -2,7 +2,10 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 
-export function Education() {
+interface EducationProps {
+  id?: string;
+}
+export const Education: React.FC<EducationProps> = ({ id }) => {
   const data = [
     {
       title: "2024",
@@ -160,8 +163,8 @@ export function Education() {
     // },
   ];
   return (
-    <div className="w-full">
+    <div id={id} className="w-full">
       <Timeline data={data} />
     </div>
   );
-}
+};

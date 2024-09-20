@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950  md:px-10 py-10"
+      className="w-full bg-white dark:bg-neutral-950  md:px-10 py-0"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -76,7 +76,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-black-500 via-gray-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-black-500 via-gray-500 to-transparent from-[0%] via-[5%] rounded-full"
           />
         </div>
       </div>
