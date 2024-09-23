@@ -66,7 +66,7 @@ export const DirectionAwareHover = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        "md:h-20 w-60 h-60 md:w-20 bg-transparent rounded-lg overflow-hidden group/card relative",
+        "md:h-20 w-20 h-20 md:w-40 sm:h-5 sm:w-5 bg-transparent rounded-lg overflow-hidden group/card relative",
         className
       )}
     >
@@ -104,7 +104,7 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
             className={cn(
-              "text-white absolute bottom-4 left-4 z-40",
+              "text-white absolute bottom-4 left-2 z-40",
               childrenClassName
             )}
           >
@@ -126,16 +126,16 @@ const variants = {
     y: 0,
   },
   top: {
-    y: 20,
+    y: 7,
   },
   bottom: {
-    y: -20,
+    y: -7,
   },
   left: {
-    x: 20,
+    x: 7,
   },
   right: {
-    x: -20,
+    x: -7,
   },
 };
 

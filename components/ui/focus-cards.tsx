@@ -78,7 +78,7 @@ export function FocusCards({ cards, id }: { cards: Card[]; id: string }) {
   return (
     <div
       id={id}
-      className="w-full bg-white dark:bg-neutral-950  md:px-10 mb-0 border-2"
+      className="w-full bg-white dark:bg-neutral-950   md:px-10 mb-0 border-2"
     >
       {/* Projects Heading */}
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">

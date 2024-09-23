@@ -1,6 +1,7 @@
-import { SignupFormDemo } from "./Home/contact/contact";
+import { Contact } from "./Home/contact/contact";
 import { Education } from "./Home/education/education";
 import { Experience } from "./Home/experience/experience";
+import Footer from "./Home/footer/footer";
 import Herosection from "./Home/hero/page";
 import Particles from "./Home/heroSection/page";
 import { FloatingDockDemo } from "./Home/navBar/page";
@@ -16,7 +17,8 @@ const Home = () => {
       <TechStack id="techStack" />
       <ProjectCards id="projects" />
       <Experience id="experience" />
-      <SignupFormDemo />
+      <Contact id="contact" />
+      <Footer />
       <FloatingDockDemo />
     </>
   );

@@ -2,7 +2,7 @@
 import type { Config } from "tailwindcss";
 const {
   default: flattenColorPalette,
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,6 +26,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "390px", // Extra small screen size for iPhone 12 Pro
+      },
       colors: {
         themeColor: "#030712",
         background: "hsl(var(--background))",
