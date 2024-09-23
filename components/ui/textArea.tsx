@@ -28,7 +28,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
           background: useMotionTemplate`
             radial-gradient(
               ${visible ? radius + "px" : "0px"} circle at ${mouseX}px ${mouseY}px,
-              var(--blue-500),
+              var(--gray-500),
               transparent 80%
             )
           `,
