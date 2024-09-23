@@ -1,4 +1,21 @@
+/* eslint-disable prefer-const */
 import type { Config } from "tailwindcss";
+const {
+  default: flattenColorPalette,
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const addVariablesForColors = ({ addBase, theme }: any) => {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+};
 
 const config: Config = {
   darkMode: ["class"],
@@ -9,7 +26,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "390px", // Extra small screen size for iPhone 12 Pro
+      },
       colors: {
+        themeColor: "#030712",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -59,8 +80,12 @@ const config: Config = {
       fontFamily: {
         Titillium: ["Titillium Web", "sans-serif"],
       },
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 };
+
 export default config;

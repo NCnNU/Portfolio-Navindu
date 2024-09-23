@@ -1,66 +1,70 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconAffiliate,
+  IconBook,
+  IconBuildingCastle,
+  IconPresentation,
+  IconSend,
 } from "@tabler/icons-react";
+import Image from "next/image";
 
 export function FloatingDockDemo() {
   const links = [
     {
       title: "Home",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Image
+          src="/images/ncBackgroudRemove1.png"
+          alt="Picture of the author"
+          width={150}
+          height={800}
+          className="w-full  h-fit"
+        />
       ),
-      href: "#",
-    },
-
-    {
-      title: "Products",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "#hero",
     },
     {
-      title: "Components",
+      title: "Education",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "#education",
     },
     {
-      title: "GitHub",
+      title: "Technologies",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconAffiliate className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#techStack",
+    },
+    {
+      title: "Projects",
+      icon: (
+        <IconPresentation className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#projects",
+    },
+    {
+      title: "Experience",
+      icon: (
+        <IconBuildingCastle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#experience",
+    },
+    {
+      title: "Contact",
+      icon: (
+        <IconSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#contact",
     },
   ];
+
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full ">
+    <div className="flex items-center justify-center h-[35rem] w-full">
       <FloatingDock
-        mobileClassName="translate-y-20 " // only for demo, remove for production
+        mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
       />
     </div>
