@@ -5,7 +5,7 @@ import { Timeline } from "@/components/ui/timeline";
 interface EducationProps {
   id?: string;
 }
-export const Education: React.FC<EducationProps> = ({ id }) => {
+const Education: React.FC<EducationProps> = ({ id }) => {
   const data = [
     {
       title: "2024",
@@ -168,3 +168,5 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
     </div>
   );
 };
+
+export default Education;

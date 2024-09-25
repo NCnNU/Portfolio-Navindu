@@ -13,7 +13,7 @@ import {
   SimpleIcon,
 } from "react-icon-cloud";
 
-export const cloudProps: Omit<ICloud, "children"> = {
+const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
     style: {
       display: "flex",
@@ -160,3 +160,5 @@ export function TechStack({ id }: TechStackProps) {
     </div>
   );
 }
+
+export default TechStack;

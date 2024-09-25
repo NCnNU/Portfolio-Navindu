@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 
-export function FloatingDockDemo() {
+export default function FloatingDockDemo() {
   const links = [
     {
       title: "Home",

@@ -16,7 +16,7 @@ interface ContactProps {
   id: string;
 }
 
-export function Contact({ id }: ContactProps) {
+export default function Contact({ id }: ContactProps) {
   console.log("ContactProps", id);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

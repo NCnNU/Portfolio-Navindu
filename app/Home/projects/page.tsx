@@ -4,7 +4,7 @@ interface ProjectCardsProps {
   id: string;
 }
 
-export function ProjectCards({ id }: ProjectCardsProps) {
+export default function ProjectCards({ id }: ProjectCardsProps) {
   const cards = [
     {
       id: 1,

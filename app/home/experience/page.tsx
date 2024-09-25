@@ -6,7 +6,7 @@ interface ExperienceProps {
   id: string;
 }
 
-export function Experience({ id }: ExperienceProps) {
+export default function Experience({ id }: ExperienceProps) {
   const data = [
     {
       title: "2024",
