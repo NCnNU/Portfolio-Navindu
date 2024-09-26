@@ -53,8 +53,8 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
             w-[96vw] h-auto
             lg:w-[30vw] lg:h-screen // For desktop
             md:w-[50vw] md:h-screen // For tablet and larger
-            sm:w-[15vw] sm:h-screen// Adjust size for smaller screens
-            xs:w-[1800vw] xs:h-screen // Adjusting width and position for mobile screens
+            sm:w-[10vw] sm:h-screen// Adjust size for smaller screens
+            xs:w-[95vw] xs:h-screen // Adjusting width and position for mobile screens
          
           " // Adjusting width and position for mobile screens
         />
