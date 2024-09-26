@@ -128,11 +128,13 @@ const iconSlugs = [
 interface TechStackProps {
   id?: string;
 }
-  
 
 export function TechStack({ id }: TechStackProps) {
   return (
-    <div id={id} className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 mb-32">
+    <div
+      id={id}
+      className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 mb-32"
+    >
       {/* Education Heading */}
       <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
         Technologies
@@ -145,7 +147,7 @@ export function TechStack({ id }: TechStackProps) {
       {/* Tech Stack Section */}
       <div className="relative w-full h-[500px] flex justify-center items-center ">
         {/* Overlay Text */}
-        <div className="absolute text-center z-10 px-4 ">
+        <div className="absolute text-center z-0 px-4 ">
           <h2 className="text-2xl font-bold text-white mb-4">My Tech Stack</h2>
           <p className="text-white text-base">
             Here are some of the technologies I work with.

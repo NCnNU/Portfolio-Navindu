@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { TextArea } from "@/components/ui/textArea";
 import { DirectionAwareHoverDemo } from "./socialMedia";
+import { toast } from "../toast/use-toast";
 
 interface ContactProps {
   id: string;
@@ -56,28 +57,28 @@ export default function Contact({ id }: ContactProps) {
     {
       icon: IconBrandGithub,
       text: "GitHub",
-      link: "https://github.com/your-profile",
+      link: "https://github.com/spynav",
       imageUrl:
         "https://t4.ftcdn.net/jpg/05/97/74/29/360_F_597742919_gNwhTPLDD1T9ACAJXZ9qVuvCVFsDvXCe.jpg", // Replace with actual GitHub image URL
     },
     {
       icon: IconBrandInstagram,
       text: "Instagram",
-      link: "https://google.com",
+      link: "https://www.instagram.com/nav_ch._/",
       imageUrl:
         "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual Google image URL
     },
     {
       icon: IconBrandLinkedin,
       text: "LinkedIn",
-      link: "https://onlyfans.com",
+      link: "https://www.linkedin.com/in/navindu-chathuranga-178253265/",
       imageUrl:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual OnlyFans image URL
     },
     {
       icon: IconBrandHackerrank,
       text: "HackerRank",
-      link: "https://google.com",
+      link: "https://www.hackerrank.com/profile/spynavindu",
       imageUrl:
         "https://img.freepik.com/premium-photo/web-code-neon-element-black-background-3d-rendering-illustration_567294-1375.jpg", // Replace with actual Google image URL
     },
@@ -145,6 +146,12 @@ export default function Contact({ id }: ContactProps) {
           <button
             className="bg-gradient-to-br relative group/btn from-black dark:from-slate-900 dark:to-slate-900 to-neutral-600 block dark:bg-slate-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--slate-800)_inset,0px_-1px_0px_0px_var(--slate-800)_inset]"
             type="submit"
+            onClick={() => {
+              toast({
+                title: "Recivered: Catch up",
+                description: "Thank you for your message!",
+              });
+            }}
           >
             Send &rarr;
             <BottomGradient />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Titillium_Web } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "./homee/toast/toaster";
 
 const titillium = Titillium_Web({
   weight: ["400", "600", "700"],
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${titillium.className}`}>
         <div>{children}</div>
+        <Toaster />
       </body>
     </html>
   );
