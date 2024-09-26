@@ -1,12 +1,12 @@
-import Contact from "./home/contact/page";
-import Education from "./home/education/page";
-import Experience from "./home/experience/page";
-import Footer from "./home/footer/page";
-import Herosection from "./home/hero/page";
-import Particles from "./home/heroSection/page";
-import FloatingDockDemo from "./home/navBar/page";
-import ProjectCards from "./home/projects/page";
-import TechStack from "./home/techStack/page";
+import Contact from "./homee/contact/page";
+import Education from "./homee/education/page";
+import Experience from "./homee/experience/page";
+import Footer from "./homee/footer/page";
+import Herosection from "./homee/hero/page";
+import Particles from "./homee/heroSection/page";
+import FloatingDockDemo from "./homee/navBar/page";
+import ProjectCards from "./homee/projects/page";
+import TechStack from "./homee/contact/techStack/page";
 
 const Home = () => {
   return (
