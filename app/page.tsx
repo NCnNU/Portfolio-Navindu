@@ -6,7 +6,7 @@ import Herosection from "./homee/hero/page";
 import Particles from "./homee/heroSection/page";
 import FloatingDockDemo from "./homee/navBar/page";
 import ProjectCards from "./homee/projects/page";
-import TechStack from "./homee/contact/techStack/page";
+import TechStack from "./homee/techStack/page";
 
 const Home = () => {
   return (
@@ -19,6 +19,7 @@ const Home = () => {
       <Experience id="experience" />
       <Contact id="contact" />
       <Footer />
+
       <FloatingDockDemo />
     </>
   );

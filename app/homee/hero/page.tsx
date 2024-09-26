@@ -42,18 +42,20 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
       {/* Image Container */}
       <div className="min-h-screen flex justify-end overflow-hidden w-screen">
         <Image
-          src="/images/file-6.png"
+          src="/images/file-7.png"
           alt="Picture of the author"
-          width={1050}
-          height={850}
+          width={1000}
+          height={800}
           className="
         
-            transform translate-x-1/4 -translate-y-0
+            md:transform translate-x-1/4 -translate-y-0
+         
             w-[96vw] h-auto
-            lg:w-[50vw] lg:h-screen // For desktop
-            md:w-[70vw] md:h-screen // For tablet and larger
-            sm:w-[1500vw] sm:h-screen// Adjust size for smaller screens
-            xs:w-[180vw] xs:h-screen // Adjusting width and position for mobile screens
+            lg:w-[30vw] lg:h-screen // For desktop
+            md:w-[50vw] md:h-screen // For tablet and larger
+            sm:w-[15vw] sm:h-screen// Adjust size for smaller screens
+            xs:w-[1800vw] xs:h-screen // Adjusting width and position for mobile screens
+         
           " // Adjusting width and position for mobile screens
         />
       </div>

@@ -11,27 +11,35 @@ import {
 } from "@tabler/icons-react";
 import { TextArea } from "@/components/ui/textArea";
 import { DirectionAwareHoverDemo } from "./socialMedia";
+import { toast } from "../toast/use-toast";
 
 interface ContactProps {
   id: string;
 }
 
 export default function Contact({ id }: ContactProps) {
-  console.log("ContactProps", id);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Use FormData to gather input values
     const formData = new FormData(e.currentTarget);
     const data = {
-      firstname: formData.get("firstname"),
-      lastname: formData.get("lastname"),
-      email: formData.get("email"),
-      message: formData.get("message"),
+      firstname: formData.get("firstname") as string,
+      lastname: formData.get("lastname") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
     };
-    console.log("Form Data Submitted:", data);
 
-    console.log("Form Data Submitted:", data);
+    // Validate if any field is empty
+    if (!data.firstname || !data.lastname || !data.email || !data.message) {
+      // Show an error toast if fields are missing
+      toast({
+        title: "Error",
+        description: "Please fill all the fields before submitting.",
+      });
+      return; // Stop form submission
+    }
+
     try {
       const response = await fetch("api/sendMail", {
         method: "POST",
@@ -42,13 +50,24 @@ export default function Contact({ id }: ContactProps) {
       });
 
       if (response.ok) {
-        console.log("Email sent successfully!");
-        // Optionally show success message to the user
+        // Success toast
+        toast({
+          title: "Success",
+          description: "Your message has been sent successfully!",
+        });
       } else {
-        console.error("Failed to send email.");
+        // Error toast if email sending failed
+        toast({
+          title: "Error",
+          description: "Failed to send email. Please try again later.",
+        });
       }
     } catch (error) {
       console.error("Error occurred while sending the email:", error);
+      toast({
+        title: "Error",
+        description: "An error occurred while sending the email.",
+      });
     }
   };
 
@@ -56,30 +75,30 @@ export default function Contact({ id }: ContactProps) {
     {
       icon: IconBrandGithub,
       text: "GitHub",
-      link: "https://github.com/your-profile",
+      link: "https://github.com/spynav",
       imageUrl:
-        "https://t4.ftcdn.net/jpg/05/97/74/29/360_F_597742919_gNwhTPLDD1T9ACAJXZ9qVuvCVFsDvXCe.jpg", // Replace with actual GitHub image URL
+        "https://media.printables.com/media/prints/207008/images/1903354_02ddf438-2032-4173-b50c-de1a6b8c1265/thumbs/inside/1280x960/png/github-logo-2.webp", // Replace with actual GitHub image URL
     },
     {
       icon: IconBrandInstagram,
       text: "Instagram",
-      link: "https://google.com",
+      link: "https://www.instagram.com/nav_ch._/",
       imageUrl:
         "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual Google image URL
     },
     {
       icon: IconBrandLinkedin,
       text: "LinkedIn",
-      link: "https://onlyfans.com",
+      link: "https://www.linkedin.com/in/navindu-chathuranga-178253265/",
       imageUrl:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual OnlyFans image URL
     },
     {
       icon: IconBrandHackerrank,
       text: "HackerRank",
-      link: "https://google.com",
+      link: "https://www.hackerrank.com/profile/spynavindu",
       imageUrl:
-        "https://img.freepik.com/premium-photo/web-code-neon-element-black-background-3d-rendering-illustration_567294-1375.jpg", // Replace with actual Google image URL
+        "https://atlas-content-cdn.pixelsquid.com/stock-images/black-symbol-code-logo-Q99A9r7-600.jpg", // Replace with actual Google image URL
     },
   ];
 
