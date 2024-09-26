@@ -91,7 +91,7 @@ export default function Contact({ id }: ContactProps) {
       text: "LinkedIn",
       link: "https://www.linkedin.com/in/navindu-chathuranga-178253265/",
       imageUrl:
-        "https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Wordmark-Black-Logo.wine.svg", // Replace with actual OnlyFans image URL
+        "https://img.freepik.com/premium-vector/icon-vector-linkedin-with-circle-background-plus-shadow-it_967223-1742.jpg?semt=ais_hybrid  ", // Replace with actual OnlyFans image URL
     },
     {
       icon: IconBrandHackerrank,

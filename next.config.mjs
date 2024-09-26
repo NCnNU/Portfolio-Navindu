@@ -16,6 +16,7 @@ const nextConfig = {
       "t3.ftcdn.net",
       "e7.pngegg.com",
       "media.istockphoto.com",
+      "cdn4.vectorstock.com",
 
       // Add this new domain
     ],
