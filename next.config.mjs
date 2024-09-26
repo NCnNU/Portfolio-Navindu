@@ -10,6 +10,10 @@ const nextConfig = {
       "t4.ftcdn.net",
       "img.freepik.com",
       "th.bing.com",
+      "atlas-content-cdn.pixelsquid.com",
+      "media.printables.com",
+      "c8.alamy.com",
+      "t3.ftcdn.net",
 
       // Add this new domain
     ],

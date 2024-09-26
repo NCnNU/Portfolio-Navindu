@@ -272,7 +272,7 @@ const Particles: React.FC<ParticlesProps> = ({
     <div>
       <div
         ref={canvasContainerRef}
-        className={`${className} w-full h-full absolute`}
+        className={`${className} w-full h-full absolute `}
       >
         <canvas ref={canvasRef} />
       </div>
