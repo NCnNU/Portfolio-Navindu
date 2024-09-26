@@ -14,6 +14,8 @@ const nextConfig = {
       "media.printables.com",
       "c8.alamy.com",
       "t3.ftcdn.net",
+      "e7.pngegg.com",
+      "media.istockphoto.com",
 
       // Add this new domain
     ],

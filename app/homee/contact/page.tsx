@@ -84,14 +84,14 @@ export default function Contact({ id }: ContactProps) {
       text: "Instagram",
       link: "https://www.instagram.com/nav_ch._/",
       imageUrl:
-        "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual Google image URL
+        "https://media.istockphoto.com/id/1278996256/vector/camera-icon-simple-style-isolated-vector-illustration-on-white-background.jpg?s=612x612&w=0&k=20&c=nmJsi4AIImCMPD_hyNDb8kLhO1iDRcbW-haTBcByOJo=", // Replace with actual Google image URL
     },
     {
       icon: IconBrandLinkedin,
       text: "LinkedIn",
       link: "https://www.linkedin.com/in/navindu-chathuranga-178253265/",
       imageUrl:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual OnlyFans image URL
+        "https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Wordmark-Black-Logo.wine.svg", // Replace with actual OnlyFans image URL
     },
     {
       icon: IconBrandHackerrank,
