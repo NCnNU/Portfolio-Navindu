@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import HoverBorderGradientDemo from "../resume/page";
 
 interface HerosectionProps {
   id?: string;
@@ -23,7 +24,7 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
   }, []);
 
   return (
-    <div id={id} className="relative overflow-hidden  w-full">
+    <div id={id} className="relative overflow-hidden w-full">
       {/* Fixed Image at bottom-right corner */}
       <div className="w-full flex">
         <Image
@@ -47,20 +48,22 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
           width={1000}
           height={800}
           className="
-        
             md:transform translate-x-1/4 -translate-y-0
-         
             w-[96vw] h-auto
-            lg:w-[30vw] lg:h-screen // For desktop
-            md:w-[50vw] md:h-screen // For tablet and larger
-            sm:w-[10vw] sm:h-screen// Adjust size for smaller screens
-            xs:w-[95vw] xs:h- // Adjusting width and position for mobile screens
+            lg:w-[30vw] lg:h-screen
+            md:w-[50vw] md:h-screen
+            sm:w-[10vw] sm:h-screen
+            xs:w-[95vw]
             md:mt-0
             sm:mt-32
             xs:mt-32
-         
-          " // Adjusting width and position for mobile screens
+          "
         />
+      </div>
+
+      {/* Button Container */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4 sm:mb-8">
+        <HoverBorderGradientDemo />
       </div>
     </div>
   );

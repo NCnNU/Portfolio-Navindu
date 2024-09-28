@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+
 interface MousePosition {
   x: number;
   y: number;
@@ -275,6 +276,7 @@ const Particles: React.FC<ParticlesProps> = ({
         className={`${className} w-full h-full absolute `}
       >
         <canvas ref={canvasRef} />
+        
       </div>
     </div>
   );
@@ -301,4 +303,4 @@ export default Particles;
 //     </div>
 //   </div>
 // );
-// mjibguv  
+// mjibguv
