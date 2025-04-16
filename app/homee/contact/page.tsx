@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../../../components/ui/label";
 import { Input } from "../../../components/ui/input";
 import { cn } from "@/lib/utils";
@@ -17,11 +17,13 @@ interface ContactProps {
   id: string;
 }
 
+
 export default function Contact({ id }: ContactProps) {
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
-    // Use FormData to gather input values
     const formData = new FormData(e.currentTarget);
     const data = {
       firstname: formData.get("firstname") as string,
@@ -30,33 +32,28 @@ export default function Contact({ id }: ContactProps) {
       message: formData.get("message") as string,
     };
 
-    // Validate if any field is empty
     if (!data.firstname || !data.lastname || !data.email || !data.message) {
-      // Show an error toast if fields are missing
       toast({
         title: "Error",
         description: "Please fill all the fields before submitting.",
       });
-      return; // Stop form submission
+      setLoading(false);
+      return;
     }
 
     try {
       const response = await fetch("api/sendMail", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
       if (response.ok) {
-        // Success toast
         toast({
           title: "Success",
           description: "Your message has been sent successfully!",
         });
       } else {
-        // Error toast if email sending failed
         toast({
           title: "Error",
           description: "Failed to send email. Please try again later.",
@@ -68,6 +65,8 @@ export default function Contact({ id }: ContactProps) {
         title: "Error",
         description: "An error occurred while sending the email.",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -162,10 +161,18 @@ export default function Contact({ id }: ContactProps) {
           </LabelInputContainer>
 
           <button
-            className="bg-gradient-to-br relative group/btn from-black dark:from-slate-900 dark:to-slate-900 to-neutral-600 block dark:bg-slate-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--slate-800)_inset,0px_-1px_0px_0px_var(--slate-800)_inset]"
+            disabled={loading}
+            className="bg-gradient-to-br relative group/btn from-black dark:from-slate-900 dark:to-slate-900 to-neutral-600 block dark:bg-slate-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--slate-800)_inset,0px_-1px_0px_0px_var(--slate-800)_inset] flex items-center justify-center gap-2"
             type="submit"
           >
-            Send &rarr;
+            {loading ? (
+              <>
+                Sending
+                <span className="animate-ping-fast inline-block w-2 h-2 rounded-full bg-white"></span>
+              </>
+            ) : (
+              <>Send &rarr;</>
+            )}
             <BottomGradient />
           </button>
         </form>
