@@ -123,6 +123,9 @@ const iconSlugs = [
   "prisma",
   "clodinary",
   "bootstrap",
+  "amazonaws",
+  "material-ui",
+  "pulumi",
 ];
 
 interface TechStackProps {
