@@ -5,13 +5,13 @@ import nodemailer from 'nodemailer';
 export async function POST(req: Request) {
   try {
     const { firstname, lastname, email, message } = await req.json();
-    console.log('Form Data Submittedddddddddddddddddddddd:', { firstname, lastname, email, message });
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: "spynavindu@gmail.com", // Use your Gmail credentials
-        pass: "pdkd mwqt djru akza", // Your app password or SMTP server password
+        pass: 
+          process.env.EMAIL_PASS,
       },
     });
 
