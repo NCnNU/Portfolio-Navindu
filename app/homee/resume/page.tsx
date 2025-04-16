@@ -6,10 +6,10 @@ import { IconFileDownload } from "@tabler/icons-react";
 export default function HoverBorderGradientDemo() {
   const handleDownload = () => {
     // URL to your resume file
-    const resumeUrl = "/Navindu.me.pdf";
+    const resumeUrl = "/Navindu Chathuranga.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Navindu.pdf";
+    link.download = "Navindu Chathuranga.pdf";
     link.click();
   };
 

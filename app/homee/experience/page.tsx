@@ -9,6 +9,28 @@ interface ExperienceProps {
 export default function Experience({ id }: ExperienceProps) {
   const data = [
     {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm  mb-2  font-semibold">
+            Enlear
+          </p>
+          <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm  mb-4 font-semibold">
+            Software Engineer Intern
+          </p>
+          <p
+            className="
+            text-neutral-400 dark:text-neutral-200 text-xs md:text-sm  mb-16
+          "
+          >
+            Enlear is a company that provides a platform for learning and
+            development, offering various courses and resources to enhance
+            skills and knowledge in different fields.
+          </p>
+        </div>
+      ),
+    },
+    {
       title: "2024",
       content: (
         <div>
