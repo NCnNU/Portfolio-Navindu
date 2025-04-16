@@ -1,7 +1,6 @@
 // import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/experienceTimeline";
-import { title } from "process";
 
 interface ExperienceProps {
   id: string;
