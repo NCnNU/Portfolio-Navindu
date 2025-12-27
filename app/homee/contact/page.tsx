@@ -75,8 +75,7 @@ export default function Contact({ id }: ContactProps) {
       icon: IconBrandGithub,
       text: "GitHub",
       link: "https://github.com/spynav",
-      imageUrl:
-        "https://media.printables.com/media/prints/207008/images/1903354_02ddf438-2032-4173-b50c-de1a6b8c1265/thumbs/inside/1280x960/png/github-logo-2.webp", // Replace with actual GitHub image URL
+      imageUrl: "/images/github.png",
     },
     {
       icon: IconBrandInstagram,
@@ -90,37 +89,37 @@ export default function Contact({ id }: ContactProps) {
       text: "LinkedIn",
       link: "https://www.linkedin.com/in/navindu-chathuranga-178253265/",
       imageUrl:
-        "https://img.freepik.com/premium-vector/icon-vector-linkedin-with-circle-background-plus-shadow-it_967223-1742.jpg?semt=ais_hybrid  ", // Replace with actual OnlyFans image URL
+      "/images/linkedin.png",
     },
     {
       icon: IconBrandHackerrank,
       text: "HackerRank",
       link: "https://www.hackerrank.com/profile/spynavindu",
       imageUrl:
-        "https://atlas-content-cdn.pixelsquid.com/stock-images/black-symbol-code-logo-Q99A9r7-600.jpg", // Replace with actual Google image URL
+        "/images/hackerrank.png",
     },
   ];
 
   return (
     <div
       id={id}
-      className="w-full bg-white dark:bg-neutral-950 md:px-10 py-0 border-1 pb-28"
+      className="w-full bg-black dark:bg-black md:px-10 py-0 border-1 pb-28"
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
           Contact
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+        <p className="text-neutral-300 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           Feel free to reach out for collaboration, inquiries, or just to say
           hello. You can contact me via email or connect with me on social media
           through the links below.
         </p>
       </div>
-      <div className="max-w-5xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black border-2 border-themeColor">
-        <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+      <div className="max-w-5xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-white border-2 border-neutral-200 dark:border-neutral-200">
+        <h2 className="font-bold text-xl text-neutral-900 dark:text-neutral-900">
           Get in touch
         </h2>
-        <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+        <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-600">
           Simply email me or use my social media accounts.
         </p>
 

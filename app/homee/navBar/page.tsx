@@ -6,6 +6,7 @@ import {
   IconBuildingCastle,
   IconPresentation,
   IconSend,
+  IconBrandMedium,
 } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -53,6 +54,13 @@ export default function FloatingDockDemo() {
       href: "#experience",
     },
     {
+      title: "Blog",
+      icon: (
+        <IconBrandMedium className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#blog",
+    },
+    {
       title: "Contact",
       icon: (
         <IconSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
@@ -62,7 +70,7 @@ export default function FloatingDockDemo() {
   ];
 
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
+    <div className="flex items-center justify-center w-full">
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}

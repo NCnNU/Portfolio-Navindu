@@ -14,15 +14,15 @@ export default function HoverBorderGradientDemo() {
   };
 
   return (
-    <div className="m-40 flex justify-center text-center ">
+    <div className="flex justify-start text-center w-full sm:w-auto">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-3 "
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 sm:space-x-3 px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
         onClick={handleDownload} // Attach download handler
       >
-        <IconFileDownload color="gray" stroke={2} />
-        <span>Resume</span>
+        <IconFileDownload color="gray" stroke={2} className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span className="font-medium">Download Resume</span>
       </HoverBorderGradient>
     </div>
   );

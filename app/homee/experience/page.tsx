@@ -16,6 +16,27 @@ export default function Experience({ id }: ExperienceProps) {
             Enlear
           </p>
           <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm  mb-4 font-semibold">
+            Associate Software Engineer
+          </p>
+          <p
+            className="
+            text-neutral-400 dark:text-neutral-200 text-xs md:text-sm  mb-16
+          "
+          >
+            Promoted to Associate Software Engineer, continuing to contribute to
+            Enlear's platform for learning and development.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm  mb-2  font-semibold">
+            Enlear
+          </p>
+          <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm  mb-4 font-semibold">
             Software Engineer Intern
           </p>
           <p

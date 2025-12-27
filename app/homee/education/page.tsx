@@ -8,7 +8,7 @@ interface EducationProps {
 const Education: React.FC<EducationProps> = ({ id }) => {
   const data = [
     {
-      title: "2025",
+      title: "2026",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm  mb-8 font-semibold">

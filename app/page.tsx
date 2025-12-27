@@ -7,6 +7,7 @@ import Particles from "./homee/heroSection/page";
 import FloatingDockDemo from "./homee/navBar/page";
 import ProjectCards from "./homee/projects/page";
 import TechStack from "./homee/techStack/page";
+import Blog from "./homee/blog/page";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <TechStack id="techStack" />
       <ProjectCards id="projects" />
       <Experience id="experience" />
+      <Blog id="blog" />
       <Contact id="contact" />
       <Footer />
 
