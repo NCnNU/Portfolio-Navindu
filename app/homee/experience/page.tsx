@@ -24,7 +24,7 @@ export default function Experience({ id }: ExperienceProps) {
           "
           >
             Promoted to Associate Software Engineer, continuing to contribute to
-            Enlear's platform for learning and development.
+            Enlear&apos;s platform for learning and development.
           </p>
         </div>
       ),

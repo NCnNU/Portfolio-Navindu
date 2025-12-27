@@ -97,7 +97,7 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
             variants={itemVariants}
           >
             <span className="text-neutral-300 dark:text-neutral-300 text-sm sm:text-base font-medium">
-              👋 Welcome, I'm
+              👋 Welcome, I&apos;m
             </span>
           </motion.div>
 
