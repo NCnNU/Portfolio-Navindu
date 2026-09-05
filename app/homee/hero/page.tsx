@@ -93,8 +93,8 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
           animate="visible"
         >
           <motion.div className="inline-block mb-6" variants={itemVariants}>
-            <span className="text-neutral-300 dark:text-neutral-300 text-sm sm:text-base font-medium">
-              👋 Welcome, I&apos;m
+            <span className="text-neutral-400 dark:text-neutral-400 text-xs sm:text-sm font-medium uppercase tracking-[0.2em]">
+              Hello, I&apos;m
             </span>
           </motion.div>
 
