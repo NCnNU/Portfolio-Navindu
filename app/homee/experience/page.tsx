@@ -9,6 +9,42 @@ interface ExperienceProps {
 export default function Experience({ id }: ExperienceProps) {
   const data = [
     {
+      title: "2026",
+      content: (
+        <div>
+          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm  mb-2  font-semibold">
+            Enlear
+          </p>
+          <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm  mb-4 font-semibold">
+            Software Engineer
+          </p>
+          <p
+            className="
+            text-neutral-400 dark:text-neutral-200 text-xs md:text-sm  mb-16
+          "
+          >
+            Promoted to Software Engineer, building and scaling features across
+            Enlear&apos;s learning and development platform.
+          </p>
+          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm  mb-2  font-semibold">
+            Amazon Web Services (AWS)
+          </p>
+          <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm  mb-4 font-semibold">
+            AWS Community Builder &mdash; AI Engineering
+          </p>
+          <p
+            className="
+            text-neutral-400 dark:text-neutral-200 text-xs md:text-sm  mb-16
+          "
+          >
+            Selected for the AWS Community Builders program under the AI
+            Engineering category, sharing knowledge on AI and cloud engineering
+            with the global AWS community.
+          </p>
+        </div>
+      ),
+    },
+    {
       title: "2025",
       content: (
         <div>

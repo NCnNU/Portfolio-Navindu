@@ -92,10 +92,7 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div
-            className="inline-block mb-6 px-4 py-2 rounded-full bg-neutral-800/60 backdrop-blur-md border border-neutral-700/50 shadow-lg"
-            variants={itemVariants}
-          >
+          <motion.div className="inline-block mb-6" variants={itemVariants}>
             <span className="text-neutral-300 dark:text-neutral-300 text-sm sm:text-base font-medium">
               👋 Welcome, I&apos;m
             </span>
@@ -115,7 +112,13 @@ const Herosection: React.FC<HerosectionProps> = ({ id }) => {
 
           <motion.div className="mb-6 w-full" variants={itemVariants}>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-neutral-200 dark:text-neutral-200 mb-4">
-              Associate Software Engineer
+              Software Engineer
+              <span className="mx-2 sm:mx-3 text-neutral-500 dark:text-neutral-500 text-base sm:text-lg md:text-xl lg:text-2xl">
+                |
+              </span>
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl">
+                AWS Community Builder
+              </span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-neutral-400 dark:text-neutral-400 leading-relaxed max-w-2xl">
               Crafting elegant solutions through code. Passionate about building
